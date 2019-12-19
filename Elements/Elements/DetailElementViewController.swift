@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailElementViewController: UIViewController {
-
+    
     @IBOutlet weak var elementImageLabel: UIImageView!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
@@ -17,7 +17,7 @@ class DetailElementViewController: UIViewController {
     @IBOutlet weak var meltingPointLabel: UILabel!
     @IBOutlet weak var boilingPointLabel: UILabel!
     @IBOutlet weak var discoveredByLabel: UILabel!
-
+    
     var element: Element?
     
     override func viewDidLoad() {
@@ -64,6 +64,21 @@ class DetailElementViewController: UIViewController {
         }
         else    {
             discoveredByLabel.text = "N/A"
+        }
+    }
+    
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        guard let theFavoriteElement = element else {
+            return
+        }
+        
+        ElementAPIClient.postFavoriteElement(favorited: theFavoriteElement) { (result) in
+            switch result   {
+            case .failure(let appError):
+                print(appError)
+            case .success:
+                print("Success, message: \(theFavoriteElement.name) was posted")
+            }
         }
     }
     

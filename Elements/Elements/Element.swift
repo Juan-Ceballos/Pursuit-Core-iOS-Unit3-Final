@@ -17,6 +17,10 @@ struct Element: Codable {
     let number: Int
     let symbol: String
     
+    var favoritedBy: String {
+        return "Juan Ceballos"
+    }
+    
     var urlNumberElement: String    {
         var formattedNumberString: String
         let numberElement = number
