@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4437E823ABD17E00F5052F /* DetailElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437E723ABD17E00F5052F /* DetailElementViewController.swift */; };
+		3E4437EA23ABD1B600F5052F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437E923ABD1B600F5052F /* AppError.swift */; };
+		3E4437EC23ABD1CB00F5052F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437EB23ABD1CB00F5052F /* NetworkHelper.swift */; };
+		3E4437EE23ABD1EB00F5052F /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437ED23ABD1EB00F5052F /* UIImageView + Extensions.swift */; };
+		3E4437F023ABD36400F5052F /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437EF23ABD36400F5052F /* ElementCell.swift */; };
+		3E4437F223ABD62B00F5052F /* ElementAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437F123ABD62B00F5052F /* ElementAPIClient.swift */; };
+		3E4437F423ABD69500F5052F /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4437F323ABD69500F5052F /* Element.swift */; };
 		5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734756121DA90C700FB6177 /* AppDelegate.swift */; };
-		5734756421DA90C700FB6177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734756321DA90C700FB6177 /* ViewController.swift */; };
+		5734756421DA90C700FB6177 /* ElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734756321DA90C700FB6177 /* ElementViewController.swift */; };
 		5734756721DA90C700FB6177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756521DA90C700FB6177 /* Main.storyboard */; };
 		5734756921DA90C800FB6177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5734756821DA90C800FB6177 /* Assets.xcassets */; };
 		5734756C21DA90C800FB6177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756A21DA90C800FB6177 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4437E723ABD17E00F5052F /* DetailElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailElementViewController.swift; sourceTree = "<group>"; };
+		3E4437E923ABD1B600F5052F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3E4437EB23ABD1CB00F5052F /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		3E4437ED23ABD1EB00F5052F /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
+		3E4437EF23ABD36400F5052F /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
+		3E4437F123ABD62B00F5052F /* ElementAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementAPIClient.swift; sourceTree = "<group>"; };
+		3E4437F323ABD69500F5052F /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		5734755E21DA90C700FB6177 /* Elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5734756121DA90C700FB6177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5734756321DA90C700FB6177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5734756321DA90C700FB6177 /* ElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementViewController.swift; sourceTree = "<group>"; };
 		5734756621DA90C700FB6177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5734756821DA90C800FB6177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5734756B21DA90C800FB6177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,8 +68,15 @@
 		5734756021DA90C700FB6177 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				5734756321DA90C700FB6177 /* ViewController.swift */,
+				5734756321DA90C700FB6177 /* ElementViewController.swift */,
+				3E4437E723ABD17E00F5052F /* DetailElementViewController.swift */,
+				3E4437F323ABD69500F5052F /* Element.swift */,
+				3E4437EF23ABD36400F5052F /* ElementCell.swift */,
+				3E4437F123ABD62B00F5052F /* ElementAPIClient.swift */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
+				3E4437E923ABD1B600F5052F /* AppError.swift */,
+				3E4437EB23ABD1CB00F5052F /* NetworkHelper.swift */,
+				3E4437ED23ABD1EB00F5052F /* UIImageView + Extensions.swift */,
 				5734757321DA90F500FB6177 /* Supporting Files */,
 				5734756D21DA90C800FB6177 /* Info.plist */,
 			);
@@ -143,7 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5734756421DA90C700FB6177 /* ViewController.swift in Sources */,
+				3E4437F023ABD36400F5052F /* ElementCell.swift in Sources */,
+				3E4437EA23ABD1B600F5052F /* AppError.swift in Sources */,
+				3E4437F423ABD69500F5052F /* Element.swift in Sources */,
+				3E4437E823ABD17E00F5052F /* DetailElementViewController.swift in Sources */,
+				3E4437EE23ABD1EB00F5052F /* UIImageView + Extensions.swift in Sources */,
+				3E4437F223ABD62B00F5052F /* ElementAPIClient.swift in Sources */,
+				3E4437EC23ABD1CB00F5052F /* NetworkHelper.swift in Sources */,
+				5734756421DA90C700FB6177 /* ElementViewController.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
