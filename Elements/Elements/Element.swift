@@ -17,7 +17,19 @@ struct Element: Codable {
     let number: Int
     let symbol: String
     var urlNumberElement: String    {
+        var formattedNumberString: String
+        let numberElement = number
+        if numberElement < 10    {
+            formattedNumberString = "00\(number.description)"
+        }
+        else if numberElement >= 10 && numberElement < 100 {
+            formattedNumberString = "0\(number.description)"
+        }
         
+        else    {
+            formattedNumberString = "\(number.description)"
+        }
+        return formattedNumberString
     }
         
     enum CodingKeys: String, CodingKey {

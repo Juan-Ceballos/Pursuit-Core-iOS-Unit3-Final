@@ -52,7 +52,7 @@ extension ElementViewController: UITableViewDataSource  {
         }
         
         let element = elements[indexPath.row]
-        cell.configureCell(urlString: "", element: element)
+        cell.configureCell(urlString: "http://www.theodoregray.com/periodictable/Tiles/\(element.urlNumberElement)/s7.JPG", element: element)
         
         return cell
     }

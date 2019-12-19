@@ -17,22 +17,6 @@ class ElementCell: UITableViewCell {
     //let urlString = "http://www.theodoregray.com/periodictable/Tiles/\(elementNumber)/s7.JPG"
     //elementNumber
     
-    func formatNumber(element: Element) -> String   {
-        var formattedNumberString: String
-        let numberElement = element.number
-        if numberElement < 10    {
-            formattedNumberString = "00\(element.number.description)"
-        }
-        else if numberElement > 10 && numberElement < 100 {
-            formattedNumberString = "0\(element.number.description)"
-        }
-        
-        else    {
-            formattedNumberString = "\(element.number.description)"
-        }
-        return formattedNumberString
-    }
-    
     func configureCell(urlString: String, element: Element) {
         
         elementImage.getImage(with: urlString) { (result) in
