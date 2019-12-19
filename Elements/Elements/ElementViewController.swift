@@ -11,7 +11,7 @@ import UIKit
 class ElementViewController: UIViewController {
     
     @IBOutlet weak var elementTableView: UITableView!
-        
+    
     var elements = [Element]()  {
         didSet  {
             DispatchQueue.main.async {
@@ -28,12 +28,12 @@ class ElementViewController: UIViewController {
     }
     
     func loadData() {
-        ElementAPIClient.fetchElements { (result) in
+        ElementAPIClient.fetchElements { [weak self] (result) in
             switch result   {
             case .failure(let appError):
                 print(appError)
             case .success(let element):
-                self.elements = element
+                self?.elements = element
             }
         }
     }

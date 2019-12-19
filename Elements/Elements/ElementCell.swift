@@ -13,10 +13,6 @@ class ElementCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     
-    //Example: http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG
-    //let urlString = "http://www.theodoregray.com/periodictable/Tiles/\(elementNumber)/s7.JPG"
-    //elementNumber
-    
     func configureCell(urlString: String, element: Element) {
         
         elementImage.getImage(with: urlString) { [weak self] (result) in

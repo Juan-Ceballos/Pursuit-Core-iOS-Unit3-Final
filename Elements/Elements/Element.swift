@@ -17,9 +17,6 @@ struct Element: Codable {
     let number: Int
     let symbol: String
     let favoritedBy: String?
-    //var favoritedBy: String {
-     //   return "Juan Ceballos"
-    //}
     
     var urlNumberElement: String    {
         var formattedNumberString: String
@@ -30,13 +27,13 @@ struct Element: Codable {
         else if numberElement >= 10 && numberElement < 100 {
             formattedNumberString = "0\(number.description)"
         }
-        
+            
         else    {
             formattedNumberString = "\(number.description)"
         }
         return formattedNumberString
     }
-        
+    
     enum CodingKeys: String, CodingKey {
         case name
         case atomicMass = "atomic_mass"

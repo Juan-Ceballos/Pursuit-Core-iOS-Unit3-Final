@@ -8,14 +8,14 @@
 
 import Foundation
 
-enum AppError: Error{//, CustomStringConvertible {
-    case badURL(String) // associated value
+enum AppError: Error{
+    case badURL(String)
     case noResponse
-    case networkClientError(Error) // no internet connection
+    case networkClientError(Error)
     case noData
     case decodingError(Error)
     case encodingError(Error)
-    case badStatusCode(Int) // 404, 500
-    case badMimeType(String) // image/jpg
+    case badStatusCode(Int)
+    case badMimeType(String)
     
 }

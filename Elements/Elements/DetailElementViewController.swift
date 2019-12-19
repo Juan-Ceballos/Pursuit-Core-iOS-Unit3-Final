@@ -74,8 +74,8 @@ class DetailElementViewController: UIViewController {
         }
         
         let postOfFavoriteElement = Element(name: title ?? "", atomicMass: favoriteElement.atomicMass, boil: favoriteElement.boil, discoveredBy: favoriteElement.discoveredBy, melt: favoriteElement.melt, number: favoriteElement.number, symbol: favoriteElement.symbol, favoritedBy: "Juan Ceballos")
-            
-           return postOfFavoriteElement
+        
+        return postOfFavoriteElement
     }
     
     
