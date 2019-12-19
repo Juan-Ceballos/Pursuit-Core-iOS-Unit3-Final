@@ -16,10 +16,10 @@ struct Element: Codable {
     let melt: Double?
     let number: Int
     let symbol: String
-    
-    var favoritedBy: String {
-        return "Juan Ceballos"
-    }
+    let favoritedBy: String?
+    //var favoritedBy: String {
+     //   return "Juan Ceballos"
+    //}
     
     var urlNumberElement: String    {
         var formattedNumberString: String
@@ -45,6 +45,7 @@ struct Element: Codable {
         case melt
         case number
         case symbol
+        case favoritedBy
     }
 }
 
