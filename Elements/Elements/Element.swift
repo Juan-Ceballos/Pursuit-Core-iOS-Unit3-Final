@@ -16,6 +16,7 @@ struct Element: Codable {
     let melt: Double?
     let number: Int
     let symbol: String
+    
     var urlNumberElement: String    {
         var formattedNumberString: String
         let numberElement = number
