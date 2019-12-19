@@ -139,6 +139,15 @@
                         <viewLayoutGuide key="safeArea" id="oIk-Xi-HIm"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZM6-IO-LYB"/>
+                    <connections>
+                        <outlet property="boilingPointLabel" destination="l0f-pE-a4g" id="hPh-6G-ps1"/>
+                        <outlet property="discoveredByLabel" destination="YuP-6C-WP6" id="leR-LG-qK2"/>
+                        <outlet property="elementImageLabel" destination="Qcr-D5-lnm" id="Cr7-yf-K6O"/>
+                        <outlet property="meltingPointLabel" destination="Ti1-eP-ZZf" id="EAH-mJ-MSO"/>
+                        <outlet property="numberLabel" destination="s4b-dj-Ajl" id="B8e-Se-Tkk"/>
+                        <outlet property="symbolLabel" destination="VCK-6e-o4q" id="KIB-Fn-ZyA"/>
+                        <outlet property="weightLabel" destination="4Xr-Zl-e7m" id="zFG-oX-n0p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgs-B8-Eob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

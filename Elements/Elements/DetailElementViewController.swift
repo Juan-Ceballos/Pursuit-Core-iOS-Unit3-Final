@@ -11,13 +11,12 @@ import UIKit
 class DetailElementViewController: UIViewController {
 
     @IBOutlet weak var elementImageLabel: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var meltingPointLabel: UILabel!
     @IBOutlet weak var boilingPointLabel: UILabel!
-    @IBOutlet weak var dicoveredByLabel: UILabel!
+    @IBOutlet weak var discoveredByLabel: UILabel!
 
     var element: Element?
     
@@ -42,11 +41,30 @@ class DetailElementViewController: UIViewController {
                 }
             }
         }
-        nameLabel.text = theElement.name
-        symbolLabel.text = theElement.symbol
-        numberLabel.text = theElement.number.description
-        weightLabel.text = theElement.atomicMass.description
+        symbolLabel.text = "Symbol: \(theElement.symbol)"
+        numberLabel.text = "Nummber: \(theElement.number.description)"
+        weightLabel.text = "Atomic Mass: \(theElement.atomicMass.description)"
         
+        if theElement.melt != nil    {
+            meltingPointLabel.text = "Melting Point: \(theElement.melt?.description ?? "N/A")"
+        }
+        else    {
+            meltingPointLabel.text = "N/A"
+        }
+        
+        if theElement.boil != nil    {
+            boilingPointLabel.text = "Boiling Point: \(theElement.boil?.description ?? "N/A")"
+        }
+        else    {
+            boilingPointLabel.text = "N/A"
+        }
+        
+        if theElement.discoveredBy != nil    {
+            discoveredByLabel.text = "Discovered By: \(theElement.discoveredBy ?? "N/A")"
+        }
+        else    {
+            discoveredByLabel.text = "N/A"
+        }
     }
     
 }

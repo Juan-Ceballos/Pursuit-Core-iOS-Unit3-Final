@@ -38,6 +38,16 @@ class ElementViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailElementViewController = segue.destination as? DetailElementViewController, let indexPath = elementTableView.indexPathForSelectedRow
+            else    {
+                fatalError()
+        }
+        
+        let element = elements[indexPath.row]
+        detailElementViewController.element = element
+    }
+    
 }
 
 extension ElementViewController: UITableViewDataSource  {
