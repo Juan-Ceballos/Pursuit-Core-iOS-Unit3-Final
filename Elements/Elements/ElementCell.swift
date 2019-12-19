@@ -30,6 +30,6 @@ class ElementCell: UITableViewCell {
             }
         }
         nameLabel.text = element.name
-        symbolLabel.text = element.symbol
+        symbolLabel.text = "\(element.symbol)(\(element.number)) \(element.atomicMass.description)"
     }
 }
