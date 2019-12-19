@@ -42,7 +42,7 @@ class DetailElementViewController: UIViewController {
             }
         }
         symbolLabel.text = "Symbol: \(theElement.symbol)"
-        numberLabel.text = "Nummber: \(theElement.number.description)"
+        numberLabel.text = "Number: \(theElement.number.description)"
         weightLabel.text = "Atomic Mass: \(theElement.atomicMass.description)"
         
         if theElement.melt != nil    {
