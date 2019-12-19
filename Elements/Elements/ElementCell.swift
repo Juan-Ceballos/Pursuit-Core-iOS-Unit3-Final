@@ -19,13 +19,13 @@ class ElementCell: UITableViewCell {
     
     func configureCell(urlString: String, element: Element) {
         
-        elementImage.getImage(with: urlString) { (result) in
+        elementImage.getImage(with: urlString) { [weak self] (result) in
             switch result   {
             case .failure(let appError):
                 print(appError)
             case .success(let elementImage):
                 DispatchQueue.main.async {
-                    self.elementImage.image = elementImage
+                    self?.elementImage.image = elementImage
                 }
             }
         }

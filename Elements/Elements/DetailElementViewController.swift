@@ -31,13 +31,13 @@ class DetailElementViewController: UIViewController {
                 return
         }
         title = theElement.name
-        elementImageLabel.getImage(with: "http://images-of-elements.com/\(theElement.name.lowercased() ).jpg") { (result) in
+        elementImageLabel.getImage(with: "http://images-of-elements.com/\(theElement.name.lowercased() ).jpg") { [weak self] (result) in
             switch result   {
             case .failure(let appError):
                 print(appError)
             case .success(let elementImage):
                 DispatchQueue.main.async {
-                    self.elementImageLabel.image = elementImage
+                    self?.elementImageLabel.image = elementImage
                 }
             }
         }
