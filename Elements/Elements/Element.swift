@@ -16,7 +16,7 @@ struct Element: Codable {
     let melt: Double?
     let number: Int
     let symbol: String
-    let favoritedBy: String?
+    let favoritedBy = "Juan Ceballos"
     
     var urlNumberElement: String    {
         var formattedNumberString: String

@@ -67,24 +67,11 @@ class DetailElementViewController: UIViewController {
         }
     }
     
-    
-    func formatFavoriteElement() -> Element{
-        guard let favoriteElement = element else    {
-            fatalError()
-        }
-        
-        let postOfFavoriteElement = Element(name: title ?? "", atomicMass: favoriteElement.atomicMass, boil: favoriteElement.boil, discoveredBy: favoriteElement.discoveredBy, melt: favoriteElement.melt, number: favoriteElement.number, symbol: favoriteElement.symbol, favoritedBy: "Juan Ceballos")
-        
-        return postOfFavoriteElement
-    }
-    
-    
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
         guard let theFavoriteElement = element else {
             return
         }
-        
-        ElementAPIClient.postFavoriteElement(favorited: formatFavoriteElement()) { (result) in
+        ElementAPIClient.postFavoriteElement(favorited: theFavoriteElement) { (result) in
             switch result   {
             case .failure(let appError):
                 print(appError)
